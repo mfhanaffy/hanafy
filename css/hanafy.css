@@ -433,7 +433,7 @@ ul
         transform: translateY(-50%);
         left: 0px;
         background-color: var(--main-color);
-        width: 50%;
+        width: 51%;
         height: 100%;
         border-radius: 0%;
         z-index: -1;
@@ -471,10 +471,12 @@ ul
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        perspective: 1000px;
+
     }
-    @media (max-width:517px){
-        .Articles .contaner .menue-ARTICLEs{justify-content: center;}
-     }
+@media (max-width:517px){
+    .Articles .contaner .menue-ARTICLEs{justify-content: center;}
+    }
     .Articles .contaner .menue-ARTICLEs .con_box
     {
         position: relative;
@@ -482,8 +484,11 @@ ul
         height: 400px;
         margin-bottom:20px;
         transform-style: preserve-3d;
-        perspective: 1000px;
-        
+        transition: 1s;
+    }
+    .rotate_con_box
+    {
+        transform: rotateY(180deg) scaleZ(4);
     }
     .Articles .contaner .menue-ARTICLEs .box_face1
     {
@@ -500,12 +505,7 @@ ul
         position: absolute;
         left: 0;
         top: 0;
-        transition: .5s;
-    }
-    .Articles .contaner .menue-ARTICLEs .box_rotat1
-    {
-        transform: rotatey(180deg);
-        transition: .5s;
+        /* transition: .5s; */
     }
     .Articles .contaner .menue-ARTICLEs .box_face1:hover
     {
@@ -588,12 +588,8 @@ ul
         top: 0;
         background-color: #fff;
         padding: 10px;
-        transition: .5s;
-        transform: rotatey(-180deg);
-    }
-    .Articles .contaner .menue-ARTICLEs .box_rotat2
-    {
-        transform: rotateY(0deg);
+        /* transition: .5s; */
+        transform: rotatey(180deg);
     }
     .Articles .contaner .menue-ARTICLEs .box_face2 .image img
     {
@@ -2153,19 +2149,20 @@ ul
         cursor: pointer;
         font-size: 18px;
         transition: .3s;
+        font-size: 26px;
     }
-    footer .contaner .sicial .icon .facebook:hover
+    footer .contaner .sicial .icon .github:hover
     {
         background-color: #1877f2;
     }
-    footer .contaner .sicial .icon .twitter:hover
+    footer .contaner .sicial .icon .linkedin:hover
     {
-        background-color: #1da1f2;
+        background-color: #0f5d8d;
     }
-    footer .contaner .sicial .icon .youtube:hover
+    /* footer .contaner .sicial .icon .instagram:hover
     {
         background-color: #ff0000;
-    }
+    } */
     footer .contaner .sicial p
     {
         color: rgba(255, 255, 255, 0.623);

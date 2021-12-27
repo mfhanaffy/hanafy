@@ -97,15 +97,15 @@ up_toTop.onclick = function(){
 
 // to Articles
 // box face one
-let box_face1 = document.querySelectorAll(".Articles .contaner .menue-ARTICLEs .box_face1")
-let box1_face1 = document.getElementById("box1_face1")
-let box2_face1 = document.getElementById("box2_face1")
-let box3_face1 = document.getElementById("box3_face1")
-let box5_face1 = document.getElementById("box5_face1")
-let box6_face1 = document.getElementById("box6_face1")
-let box7_face1 = document.getElementById("box7_face1")
-let box8_face1 = document.getElementById("box8_face1")
-
+let con_cox  = document.querySelectorAll(".Articles .contaner .menue-ARTICLEs .con_box")
+let con_cox1 = document.getElementById("con_box1") 
+let con_cox2 = document.getElementById("con_box2")
+let con_cox3 = document.getElementById("con_box3")
+let con_cox4 = document.getElementById("con_box4")
+let con_cox5 = document.getElementById("con_box5")
+let con_cox6 = document.getElementById("con_box6")
+let con_cox7 = document.getElementById("con_box7")
+let con_cox8 = document.getElementById("con_box8")
 // box button one
 let button1_face1 = document.getElementById("read_more1")
 let button2_face1 = document.getElementById("read_more2")
@@ -115,17 +115,7 @@ let button5_face1 = document.getElementById("read_more5")
 let button6_face1 = document.getElementById("read_more6")
 let button7_face1 = document.getElementById("read_more7")
 let button8_face1 = document.getElementById("read_more8")
-// box face tow 
-let box_face2 = document.querySelectorAll(".Articles .contaner .menue-ARTICLEs .box_face2")
 
-let box1_face2 = document.getElementById("box1_face2")
-let box2_face2 = document.getElementById("box2_face2")
-let box3_face2 = document.getElementById("box3_face2")
-let box4_face2 = document.getElementById("box4_face2")
-let box5_face2 = document.getElementById("box5_face2")
-let box6_face2 = document.getElementById("box6_face2")
-let box7_face2 = document.getElementById("box7_face2")
-let box8_face2 = document.getElementById("box8_face2")
 // box button tow
 let all_button_face2 = document.querySelectorAll(".Articles .contaner .menue-ARTICLEs .box_face2 > .less")
 let button1_face2 = document.getElementById("read_Less1")
@@ -140,78 +130,58 @@ let button8_face2 = document.getElementById("read_Less8")
 //more 
 all_button_face2.forEach(
 function(){
-box_face2.forEach(
-function(){
-box_face1.forEach(
+con_cox.forEach(
     function(){
         button1_face1.onclick=function(){
-            box_face1.forEach(function(ele){if(ele.classList.contains("box_rotat1")){ele.classList.remove("box_rotat1")}}),
-            box_face2.forEach(function(ele){if(ele.classList.contains("box_rotat2")){ele.classList.remove("box_rotat2")}}),
+            con_cox.forEach(function(ele){if(ele.classList.contains("rotate_con_box")){ele.classList.remove("rotate_con_box")}})
             all_button_face2.forEach(function(ele){if(ele.classList.contains("less_animation")){ele.classList.remove("less_animation")}}),
             button1_face2.parentElement.classList.add("less_animation")
-            box1_face1.classList.add("box_rotat1"),
-            box1_face2.classList.add("box_rotat2")
-            },
+            con_cox1.classList.add("rotate_con_box")
+            }
             button2_face1.onclick= function(){
-            box_face1.forEach(function(ele){if(ele.classList.contains("box_rotat1")){ele.classList.remove("box_rotat1")}}),
-            box_face2.forEach(function(ele){if(ele.classList.contains("box_rotat2")){ele.classList.remove("box_rotat2")}}),
+            con_cox.forEach(function(ele){if(ele.classList.contains("rotate_con_box")){ele.classList.remove("rotate_con_box")}})
             all_button_face2.forEach(function(ele){if(ele.classList.contains("less_animation")){ele.classList.remove("less_animation")}}),
             button2_face2.parentElement.classList.add("less_animation")
-            box2_face1.classList.add("box_rotat1"),
-            box2_face2.classList.add("box_rotat2")
+            con_cox2.classList.add("rotate_con_box")
             }
             button3_face1.onclick=function(){
-                box_face1.forEach(function(ele){if(ele.classList.contains("box_rotat1")){ele.classList.remove("box_rotat1")}}),
-                box_face2.forEach(function(ele){if(ele.classList.contains("box_rotat2")){ele.classList.remove("box_rotat2")}}),
+                con_cox.forEach(function(ele){if(ele.classList.contains("rotate_con_box")){ele.classList.remove("rotate_con_box")}}),
                 all_button_face2.forEach(function(ele){if(ele.classList.contains("less_animation")){ele.classList.remove("less_animation")}}),
                 button3_face2.parentElement.classList.add("less_animation")
-                box3_face1.classList.add("box_rotat1"),
-                box3_face2.classList.add("box_rotat2")
-                },
+                con_cox3.classList.add("rotate_con_box")
+                }
             button4_face1.onclick=function(){
-                box_face1.forEach(function(ele){if(ele.classList.contains("box_rotat1")){ele.classList.remove("box_rotat1")}}),
-                box_face2.forEach(function(ele){if(ele.classList.contains("box_rotat2")){ele.classList.remove("box_rotat2")}}),
+                con_cox.forEach(function(ele){if(ele.classList.contains("rotate_con_box")){ele.classList.remove("rotate_con_box")}}),
                 all_button_face2.forEach(function(ele){if(ele.classList.contains("less_animation")){ele.classList.remove("less_animation")}}),
                 button4_face2.parentElement.classList.add("less_animation")
-                box4_face1.classList.add("box_rotat1"),
-                box4_face2.classList.add("box_rotat2")
-                },
+                con_cox4.classList.add("rotate_con_box")
+                }
             button5_face1.onclick=function(){
-                box_face1.forEach(function(ele){if(ele.classList.contains("box_rotat1")){ele.classList.remove("box_rotat1")}}),
-                box_face2.forEach(function(ele){if(ele.classList.contains("box_rotat2")){ele.classList.remove("box_rotat2")}}),
+                con_cox.forEach(function(ele){if(ele.classList.contains("rotate_con_box")){ele.classList.remove("rotate_con_box")}}),
                 all_button_face2.forEach(function(ele){if(ele.classList.contains("less_animation")){ele.classList.remove("less_animation")}}),
                 button5_face2.parentElement.classList.add("less_animation")
-                box5_face1.classList.add("box_rotat1"),
-                box5_face2.classList.add("box_rotat2")
-                },
+                con_cox5.classList.add("rotate_con_box")
+                }
             button6_face1.onclick=function(){
-                box_face1.forEach(function(ele){if(ele.classList.contains("box_rotat1")){ele.classList.remove("box_rotat1")}}),
-                box_face2.forEach(function(ele){if(ele.classList.contains("box_rotat2")){ele.classList.remove("box_rotat2")}}),
+                con_cox.forEach(function(ele){if(ele.classList.contains("rotate_con_box")){ele.classList.remove("rotate_con_box")}}),
                 all_button_face2.forEach(function(ele){if(ele.classList.contains("less_animation")){ele.classList.remove("less_animation")}}),
                 button6_face2.parentElement.classList.add("less_animation")
-                box6_face1.classList.add("box_rotat1"),
-                box6_face2.classList.add("box_rotat2")
-                },
+                con_cox6.classList.add("rotate_con_box")
+                }
                 button7_face1.onclick=function(){
-                box_face1.forEach(function(ele){if(ele.classList.contains("box_rotat1")){ele.classList.remove("box_rotat1")}}),
-                box_face2.forEach(function(ele){if(ele.classList.contains("box_rotat2")){ele.classList.remove("box_rotat2")}}),
+                con_cox.forEach(function(ele){if(ele.classList.contains("rotate_con_box")){ele.classList.remove("rotate_con_box")}}),
                 all_button_face2.forEach(function(ele){if(ele.classList.contains("less_animation")){ele.classList.remove("less_animation")}}),
                 button7_face2.parentElement.classList.add("less_animation")
-                box7_face1.classList.add("box_rotat1"),
-                box7_face2.classList.add("box_rotat2")
-                },
+                con_cox7.classList.add("rotate_con_box")
+                }
                 button8_face1.onclick=function(){
-                box_face1.forEach(function(ele){if(ele.classList.contains("box_rotat1")){ele.classList.remove("box_rotat1")}}),
-                box_face2.forEach(function(ele){if(ele.classList.contains("box_rotat2")){ele.classList.remove("box_rotat2")}}),
+                con_cox.forEach(function(ele){if(ele.classList.contains("rotate_con_box")){ele.classList.remove("rotate_con_box")}}),
                 all_button_face2.forEach(function(ele){if(ele.classList.contains("less_animation")){ele.classList.remove("less_animation")}}),
                 button8_face2.parentElement.classList.add("less_animation")
-                box8_face1.classList.add("box_rotat1"),
-                box8_face2.classList.add("box_rotat2")
+                con_cox8.classList.add("rotate_con_box")
                 }
         
     }
-)
-}
 )
 }
 )
@@ -219,43 +189,35 @@ box_face1.forEach(
 // less
 
 button1_face2.onclick = function(){
-        box1_face2.classList.remove("box_rotat2"),
-        box1_face1.classList.remove("box_rotat1"),
+    con_cox1.classList.remove("rotate_con_box"),
         button1_face2.parentElement.classList.remove("less_animation")
 };
 button2_face2.onclick = function(){
-        box2_face2.classList.remove("box_rotat2"),
-        box2_face1.classList.remove("box_rotat1"),
+    con_cox2.classList.remove("rotate_con_box"),
         button2_face2.parentElement.classList.remove("less_animation")
 }
 button3_face2.onclick = function(){
-    box3_face2.classList.remove("box_rotat2"),
-    box3_face1.classList.remove("box_rotat1"),
+    con_cox3.classList.remove("rotate_con_box"),
     button3_face2.parentElement.classList.remove("less_animation")  
 };
 button4_face2.onclick = function(){
-        box4_face2.classList.remove("box_rotat2"),
-        box4_face1.classList.remove("box_rotat1"),
+    con_cox4.classList.remove("rotate_con_box"),
         button4_face2.parentElement.classList.remove("less_animation")
 };
 button5_face2.onclick = function(){
-        box5_face2.classList.remove("box_rotat2"),
-        box5_face1.classList.remove("box_rotat1"),
+    con_cox5.classList.remove("rotate_con_box"),
         button5_face2.parentElement.classList.remove("less_animation")
 };
 button6_face2.onclick = function(){
-        box6_face2.classList.remove("box_rotat2"),
-        box6_face1.classList.remove("box_rotat1"),
+    con_cox6.classList.remove("rotate_con_box"),
         button6_face2.parentElement.classList.remove("less_animation")
 }
 button7_face2.onclick = function(){
-    box7_face2.classList.remove("box_rotat2"),
-    box7_face1.classList.remove("box_rotat1"),
+    con_cox7.classList.remove("rotate_con_box"),
     button7_face2.parentElement.classList.remove("less_animation")  
 };
 button8_face2.onclick = function(){
-        box8_face2.classList.remove("box_rotat2"),
-        box8_face1.classList.remove("box_rotat1"),
+    con_cox8.classList.remove("rotate_con_box"),
         button8_face2.parentElement.classList.remove("less_animation")
 }
 // features
