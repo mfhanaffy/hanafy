@@ -6,49 +6,31 @@ let hours = document.getElementById("hours") ;
 let minutes = document.getElementById("minutes") ;
 let Seconds = document.getElementById("Seconds") ;
 
-function timersec() {
-    Seconds.innerHTML -= 1
-    if(Seconds.innerHTML === "0"){
-        Seconds.innerHTML = "60" 
-    }
+let counter = setInterval(function(){
+let dateevent = new Date("Dec 31, 2021 23:59:59").getTime();
+let date = new Date().getTime() ;
+
+let darediff = dateevent - date ;
+
+let day = Math.floor(darediff / (1000 * 60 * 60 * 24)) ;
+let hour = Math.floor(darediff % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)) ;
+let minute = Math.floor(darediff % (1000 * 60 * 60 ) / (1000 * 60 )) ;
+let Second = Math.floor(darediff % (1000 * 60 ) / (1000 )) ;
+
+days.innerHTML = day ;
+hours.innerHTML = hour ;
+minutes.innerHTML = minute ;
+Seconds.innerHTML = Second ;
+
+if( darediff <=  0 ){
+    clearInterval(counter);
+    days.innerHTML = 0 ;
+    hours.innerHTML = 0 ;
+    minutes.innerHTML = 0 ;
+    Seconds.innerHTML = 0 ;
 }
 
-setInterval( timersec , 1000)
-
-function timersmun() {
-    minutes.innerHTML -= 1
-    if(minutes.innerHTML === "0"){
-        minutes.innerHTML = "60" 
-
-    }
-}
-
-setInterval( timersmun , 60000)
-
-//60000
-
-
-function timersHou() {
-    hours.innerHTML -= 1
-    if(hours.innerHTML === "0"){
-        hours.innerHTML = "60" 
-
-    }
-}
-
-setInterval( timersHou , 3600000)
-
-
-
-function timersday() {
-    days.innerHTML -= 1
-    if(days.innerHTML === "0"){
-        days.innerHTML = "30" 
-
-    }
-}
-
-setInterval( timersday , 86400000) ;
+}, 1000)
 
 
 // End Timer
@@ -262,6 +244,45 @@ let send_data = document.getElementById("send_data")
 send_data.onclick = function(el){
 
     el.preventDefault()
+}
+// Our Awesome Stats
+let Stats = document.getElementById("Stats")
+let Stats_h1 = document.querySelectorAll(".Stats .contaner .project .project_box h1")
+let stoped = false ;
+let skills = document.getElementById("Skills") ;
+let progres = document.querySelectorAll(".SKILLS .contaner  .SKILLS_smal .box > div > span")
+
+window.onscroll = function () {
+    if (window.scrollY >= skills.offsetTop - 200){
+        progres.forEach((num) => progress(num))
+    
+    }
+    if(window.scrollY >= Stats.offsetTop - 500){
+        if(!stoped){
+            Stats_h1.forEach((num) => creatcounter(num));
+        }
+        stoped = true ;
+    };
+}
+
+function creatcounter(ele) {
+    let prog = ele.dataset.progg ;
+    let counter = setInterval(function(){
+        ele.textContent ++
+        if(ele.textContent == prog ){
+            clearInterval(counter)
+        }
+    } , 3000/prog)
+}
+// outher skills 
+
+// window.onscroll = function (){
+
+// }
+
+function progress(ele){
+    let prog = ele.dataset.width ;
+    ele.style.width = prog
 }
 
 // // test

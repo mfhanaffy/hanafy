@@ -1327,6 +1327,8 @@ ul
         position: absolute;
         left: 0;
         top: 0%;
+        transition:  .6s ;
+        
     }
 
     /* End SKILLS */
