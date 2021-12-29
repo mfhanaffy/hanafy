@@ -235,7 +235,7 @@ buMore3.onclick = function(){
 let send_data = document.getElementById("send_data")
 send_data.onclick = function(el){
 
-    el.preventDefault()
+    // el.preventDefault()
 }
 // Our Awesome Stats
 let Stats = document.getElementById("Stats")
@@ -281,6 +281,36 @@ function creatcounter(ele) {
 function progress(ele){
     let prog = ele.dataset.width ;
     ele.style.width = prog
+}
+// make douwn line form 
+let userNeme = document.getElementById("text") ;
+let userNemeS = document.getElementById("textS") ;
+let Email = document.getElementById("email") ;
+let Emails = document.getElementById("emailS") ;
+let Numb = document.getElementById("number") ;
+let NumbS = document.getElementById("numberS") ;
+let textarea = document.getElementById("textarea") ;
+let textareaS = document.getElementById("textareaS") ;
+
+userNeme.oninput = function (){
+
+    let conter = this.value.length ;
+    userNemeS.style.width = `${(conter * 100) /userNeme.getAttribute("minlength") }%` ;
+};
+Email.oninput = function (){
+
+    let conter = this.value.length ;
+    Emails.style.width = `${(conter * 100) /Email.getAttribute("minlength") }%` ;
+}
+Numb.oninput = function (){
+
+    let conter = this.value.length ;
+    NumbS.style.width = `${(conter * 100) /Numb.getAttribute("minlength") }%` ;
+}
+textarea.oninput = function (){
+
+    let conter = this.value.length ;
+    textareaS.style.width = `${(conter * 100) /textarea.getAttribute("minlength") }%` ;
 }
 
 // // test

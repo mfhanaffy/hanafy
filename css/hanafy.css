@@ -19,9 +19,28 @@ html
   padding: 0px;
   font-family: 'Cairo', sans-serif;
   font-family: 'Open Sans', sans-serif;
-  caret-color:var(--main-color)
+  /* caret-color:var(--main-color) */
 
 }
+::-webkit-scrollbar
+{
+    width: 15px;
+}
+::-webkit-scrollbar:hover
+{
+    width: 20px;
+}
+::-webkit-scrollbar-track
+{
+    background-color: var(--background-color);
+    /* border-radius: 30px; */
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--main-color);
+    border-radius: 30px;
+}
+
 #up_toTop
 {
     position: fixed;
@@ -2020,6 +2039,11 @@ ul
     @media (max-width:620px){
         .Discount .request h1{font-size: 35px;}
      }
+     .Discount .request div
+     {
+        position: relative;
+        overflow: hidden;
+     }
     .Discount .request input
     {
         width: 300px;
@@ -2051,6 +2075,15 @@ ul
     .Discount .request textarea:focus-visible
     {
         outline: none;
+    }
+    .Discount .request div > span 
+    {
+        position: absolute;
+        height: 1px;
+        background-color: var(--main-color);
+        left: 0;
+        bottom: 29px;
+        width: 0;
     }
     .Discount .request .send
     {
@@ -2161,9 +2194,9 @@ ul
     {
         background-color: #0f5d8d;
     }
-    footer .contaner .sicial .icon .instagram:hover
+    footer .contaner .sicial .icon .facebook:hover
     {
-        background-color:#000;
+        background-color:#1a5eb3;
     }
     footer .contaner .sicial p
     {
