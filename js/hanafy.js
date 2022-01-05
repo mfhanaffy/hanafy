@@ -7,7 +7,7 @@ let minutes = document.getElementById("minutes") ;
 let Seconds = document.getElementById("Seconds") ;
 
 let counter = setInterval(function(){
-let dateevent = new Date("Dec 31, 2021 23:59:59").getTime();
+let dateevent = new Date("Dec 31, 2022 23:59:59").getTime();
 let date = new Date().getTime() ;
 
 let darediff = dateevent - date ;
