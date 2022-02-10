@@ -314,6 +314,6 @@ textarea.oninput = function (){
 }
 
 // // test
-// document.onclick = function(e){
+//  document.onclick = function(e){
 //     console.log(e.target.id);
 // }
